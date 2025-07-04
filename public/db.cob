@@ -4,7 +4,7 @@
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
        SELECT OPTIONAL EMPLEADOS-ARCHIVOS
-       ASSIGN TO "g:/pubilc/empleados.dat"
+       ASSIGN TO "empleados.dat"
        ORGANIZATION IS SEQUENTIAL.
        DATA DIVISION.
        FILE SECTION.
