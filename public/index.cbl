@@ -1,26 +1,17 @@
+      ******************************************************************
+      * Author:
+      * Date:
+      * Purpose:
+      * Tectonics: cobc
+      ******************************************************************
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. DB.
+       PROGRAM-ID. INDEX.
        ENVIRONMENT DIVISION.
-       INPUT-OUTPUT SECTION.
-       FILE-CONTROL.
-       SELECT OPTIONAL EMPLEADOS-ARCHIVOS
-       ASSIGN TO "empleados.dat"
-       ORGANIZATION IS SEQUENTIAL.
+       COPY "basedata.cob".
        DATA DIVISION.
-       FILE SECTION.
-       FD EMPLEADOS-ARCHIVOS.
-           01 EMPLEADOS-REGISTROS.
-               02 EMPLEADOS-ID PIC X(6).
-               02 EMPLEADOS-NOMBRE PIC X(25).
-               02 EMPLEADOS-APELLIDOS PIC X(35).
-               02 EMPLEADOS-EDAD PIC 99.
+       COPY "script.cob".
        WORKING-STORAGE SECTION.
-       01 IDENTIFICADOR PIC X(36) VALUE "INTRODUCE EL ID DEL EMPLEADO".
-       01 NOMBRE PIC X(33) VALUE "INTRODUCE EL NOMBRE DEL EMPLEADO".
-       01 APELLIDO PIC X(34) VALUE "INTRODUCE EL APELLIDO DEL EMPLEADO".
-       01 EDAD PIC X(30) VALUE "INTRODUCE LA EDAD DEL EMPLEADO".
-       01 SI-NO PIC X.
-       01 ENTRY-OK PIC X.
+       COPY "main.cbl".
        PROCEDURE DIVISION.
        MAIN-LOGIC SECTION.
        PROGRAM-BEGIN.
@@ -62,4 +53,4 @@
            ACCEPT SI-NO.
            IF SI-NO EQUAL "s" THEN MOVE "S" TO SI-NO.
            IF SI-NO NOT EQUAL "S" THEN MOVE "N" TO SI-NO.
-       END PROGRAM DB.
+       END PROGRAM INDEX.
