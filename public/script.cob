@@ -4,7 +4,6 @@
       * Purpose:
       * Tectonics: cobc
       ******************************************************************
-       FILE SECTION.
        FD EMPLEADOS-ARCHIVOS.
            01 EMPLEADOS-REGISTROS.
                02 EMPLEADOS-ID PIC X(6).
